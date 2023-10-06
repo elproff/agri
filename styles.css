@@ -1,5 +1,6 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
     margin: 0;
     padding: 0;
 }
@@ -11,15 +12,30 @@ header {
     text-align: center;
 }
 
-main {
-    padding: 2rem;
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 ul {
     list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: white;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 a {
     text-decoration: none;
     color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
 }
