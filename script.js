@@ -1,7 +1,7 @@
 const pdfList = document.getElementById("pdf-list");
 
 // Replace 'USERNAME' with your GitHub username and 'REPOSITORY' with your repository name
-fetch("https://api.github.com/repos/USERNAME/REPOSITORY/contents/")
+fetch("https://api.github.com/repos/elproff/agri/contents/")
     .then(response => response.json())
     .then(data => {
         data.forEach(item => {
