@@ -1,10 +1,10 @@
 const pdfList = document.getElementById("pdf-list");
 
-// Replace 'GOOGLE_DRIVE_FOLDER_LINK' with the shareable link of your specific folder on Google Drive
-const googleDriveFolderLink = "https://drive.google.com/drive/folders/1gFH-9IKMm20MuIKv_1NZwh9hU2CSJ-DH?usp=sharing";
+// Replace 'FOLDER_ID' with the actual folder ID you obtained from the Google Drive URL
+const folderId = "1gFH-9IKMm20MuIKv_1NZwh9hU2CSJ-DH";
 
 // Use the Google Drive API to list files in the folder
-fetch(`https://www.googleapis.com/drive/v3/files?q='${googleDriveFolderLink}' in parents&key=YOUR_GOOGLE_API_KEY`)
+fetch(`https://www.googleapis.com/drive/v3/files?q='${folderId}' in parents&key=YOUR_GOOGLE_API_KEY`)
     .then(response => response.json())
     .then(data => {
         data.files.forEach(file => {
