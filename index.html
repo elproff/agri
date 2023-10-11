@@ -1,13 +1,42 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
 </head>
+
 <body>
-   <iframe width="805" height="453" src="https://www.youtube.com/embed/b6xBrZFEeiQ" title="Live: Watch the Gaza skyline after Hamas launched rockets into Israel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe id="videoFrame" width="805" height="453" src="https://www.youtube.com/embed/b6xBrZFEeiQ"
+        title="Live: Watch the Gaza skyline after Hamas launched rockets into Israel" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var videoFrame = document.getElementById("videoFrame");
+
+            // Autoplay the video
+            videoFrame.src += "&autoplay=1";
+
+            // Function to make the video fullscreen
+            function openFullscreen(element) {
+                if (element.requestFullscreen) {
+                    element.requestFullscreen();
+                } else if (element.mozRequestFullScreen) { // Firefox
+                    element.mozRequestFullScreen();
+                } else if (element.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                    element.webkitRequestFullscreen();
+                } else if (element.msRequestFullscreen) { // IE/Edge
+                    element.msRequestFullscreen();
+                }
+            }
+
+            // Open the video in fullscreen mode
+            openFullscreen(videoFrame);
+        });
+    </script>
 </body>
+
 </html>
