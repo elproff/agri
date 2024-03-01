@@ -8,35 +8,8 @@
 </head>
 
 <body>
-    <iframe id="videoFrame" width="805" height="453" src="https://www.youtube.com/embed/b6xBrZFEeiQ"
-        title="Live: Watch the Gaza skyline after Hamas launched rockets into Israel" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
+    <iframe src="https://drive.google.com/embeddedfolderview?id=1zyzb4hOku-FX3VgWbgm5gD3Nf0i76ivn#list" width="600" height="500" frameborder="0"></iframe>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var videoFrame = document.getElementById("videoFrame");
-
-            // Autoplay the video
-            videoFrame.src += "&autoplay=1";
-
-            // Function to make the video fullscreen
-            function openFullscreen(element) {
-                if (element.requestFullscreen) {
-                    element.requestFullscreen();
-                } else if (element.mozRequestFullScreen) { // Firefox
-                    element.mozRequestFullScreen();
-                } else if (element.webkitRequestFullscreen) { // Chrome, Safari and Opera
-                    element.webkitRequestFullscreen();
-                } else if (element.msRequestFullscreen) { // IE/Edge
-                    element.msRequestFullscreen();
-                }
-            }
-
-            // Open the video in fullscreen mode
-            openFullscreen(videoFrame);
-        });
-    </script>
 </body>
 
 </html>
